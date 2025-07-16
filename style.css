@@ -1,0 +1,91 @@
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background: #f9f9f9;
+  color: #222;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 20px;
+}
+.navbar {
+  background: #D83939;
+  color: white;
+  padding: 15px 0;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+.navbar .btn {
+  float: right;
+  background: white;
+  color: #D83939;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+.hero {
+  background: #fff0f0;
+  padding: 60px 0;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.btn-primary {
+  background: #D83939;
+  color: white;
+}
+.features, .about, .contact {
+  padding: 60px 0;
+}
+.features .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  flex: 1 1 calc(50% - 20px);
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+  font-size: 18px;
+}
+.contact p {
+  margin: 8px 0;
+}
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+}
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
