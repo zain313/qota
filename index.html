@@ -118,16 +118,21 @@
   }
 
   function handleDownload(event) {
-  event.preventDefault(); // لمنع السلوك الافتراضي
-  incrementCounter();     // زيادة العداد
+    event.preventDefault();
 
-  // بدء التحميل يدويًا
-  const link = document.createElement("a");
-  link.href = "changelaw.jpg";
-  link.download = "changelaw.jpg";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+    // 1. زيد العداد أولًا
+    incrementCounter();
+
+    // 2. ثم ابدأ التحميل بعد تأخير بسيط
+    setTimeout(() => {
+      const link = document.createElement("a");
+      link.href = "changelaw.jpg";
+      link.download = "changelaw.jpg";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 300); // تأخير 300 ملي ثانية حتى يظهر العداد
+  }
 
   updateCounter();
 </script>
