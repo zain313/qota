@@ -57,14 +57,46 @@
     </ul>
   </section>
 
+  <section>
+    <h2>شلون تساهم بالتغيير و تكون من ضمن الحملة ؟</h2>
+    <ul>
+      <li>شارك اللنك هذا و الصورة ام الباركود بصفحاتكم و بالستوريات بوسائل التواصل الاجتماعي و ادعوهم كما انتوا شاركتوا بالحملة.</li>
+      <li>ايضا قم بتنزيل الصورة الاحتجاجية و اطبعهة عند اهل الاعلانات الضوئية و اطبع علة الاقل 5 نسخ و علكهة ب اماكن عامة حتة نشوفهة موجودة بكل مكان و كل الي يشوفهة يمسح الباركود و يشارك ايضا</li>
+      <li>ايضا وقّع علة المطالبة ب تغيير القانون عبر النقر على الزر أدناه و راح يحولك للموقع العالمي المشهور change.org و يتخصص بالمطالبات الاحتجاجية.</li>
+    </ul>
+  
+
   <div class="cta">
     <a class="sign-button" href="https://chng.it/mTKMfPfRxr" target="_blank" rel="noopener noreferrer">
-      ✊ وقّع الآن لتغيير القانون
+      ✊ انقر هنا لتوقّع على تغيير نظام الانتخابات الباس
     </a>
   </div>
   
 
-  <section class="hero-gallery">
+  
+
+  
+
+
+<!--  قسم تحميل الصورة   -->
+<section>
+  <h2> حمّل الصورة التوعوية و اطبعها و شاركها في كل مكان 📥</h2>
+
+  
+  <img src="changelaw.jpg" alt="صورة توعوية" style="max-width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer;">
+  
+
+  <div style="text-align:center; margin-top:20px;">
+    <a href="changelaw.jpg" download="changelaw.jpg" class="sign-button">
+      ثم اضغط هنا لتحميل الصورة التوعوية للحملة و اطبعها و شاركها بكل مكان ⬇️
+    </a>
+  </div>
+
+  <div style="height: 200px;"></div>
+
+
+
+  <section class="hero-gallery">  
     <img src="fire.png" alt="فاجعة الكوت" />
     <img src="banner.jpg" alt="لافتة احتجاج ضد سانت ليغو" />
   </section>
@@ -72,66 +104,10 @@
   
 
 
-<!-- ✅ قسم تحميل الصورة + العداد -->
-<section>
-  <h2> حمّل الصورة التوعوية و اطبعها و شاركها في كل مكان 📥</h2>
-
-
-  <div style="text-align:center; margin-top:20px;">
-  <a href="#" class="sign-button" onclick="handleDownload(event)">
-    ⬇️ اضغط لتحميل الصورة
-  </a>
-</div>
-
-  <p style="text-align:center; font-weight:bold; margin-top:10px;">
-    ✅ تم تحميل الصورة <span id="counter">...</span> مرة
-  </p>
-</section>
-
-
 <footer>
   <p>تم إعداد هذا الموقع كمبادرة شعبية مستقلة لدعم تغيير قانون الانتخابات في العراق.</p>
 </footer>
 
-<!-- ✅ كود العداد -->
-<script>
-  const namespace = "zain-download";
-  const key = "changelaw";
 
-  function updateCounter() {
-    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("counter").textContent = data.value;
-      });
-  }
-
-  function incrementCounter() {
-    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("counter").textContent = data.value;
-      });
-  }
-
-  function handleDownload(event) {
-    event.preventDefault();
-
-    // 1. زيد العداد أولًا
-    incrementCounter();
-
-    // 2. ثم ابدأ التحميل بعد تأخير بسيط
-    setTimeout(() => {
-      const link = document.createElement("a");
-      link.href = "changelaw.jpg";
-      link.download = "changelaw.jpg";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }, 300); // تأخير 300 ملي ثانية حتى يظهر العداد
-  }
-
-  updateCounter();
-</script>
 </body>
 </html>
