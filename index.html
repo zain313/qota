@@ -76,8 +76,8 @@
 <section>
   <h2> حمّل الصورة التوعوية و اطبعها و شاركها في كل مكان 📥</h2>
 
-  <a href="changelaw.jpg" download="changelaw.jpg" onclick="incrementCounter()">
-    <img src="changelaw.jpg" alt="صورة توعوية" style="max-width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer;">
+  <a href="#" onclick="handleDownload(event)">⬇️ اضغط لتحميل الصورة</a>
+  <img src="changelaw.jpg" alt="صورة توعوية" style="max-width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer;">
   </a>
 
   <div style="text-align:center; margin-top:20px;">
@@ -116,6 +116,18 @@
         document.getElementById("counter").textContent = data.value;
       });
   }
+
+  function handleDownload(event) {
+  event.preventDefault(); // لمنع السلوك الافتراضي
+  incrementCounter();     // زيادة العداد
+
+  // بدء التحميل يدويًا
+  const link = document.createElement("a");
+  link.href = "changelaw.jpg";
+  link.download = "changelaw.jpg";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 
   updateCounter();
 </script>
