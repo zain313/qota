@@ -1,91 +1,112 @@
-
 body {
   margin: 0;
-  font-family: 'Rubik', sans-serif;
-  background: #f9f9f9;
-  color: #222;
+  font-family: 'Cairo', sans-serif;
+  background: #fdfdfd;
+  color: #111;
 }
-.container {
-  max-width: 960px;
-  margin: auto;
-  padding: 0 20px;
-}
-.navbar {
-  background: #D83939;
+header {
+  background: linear-gradient(to left, #d32f2f, #b71c1c);
   color: white;
-  padding: 15px 0;
-}
-.logo-box {
-  display: flex;
-  align-items: center;
-}
-.logo-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border-radius: 8px;
-}
-.logo {
-  font-weight: 700;
-  font-size: 24px;
-  margin: 0;
-}
-.navbar .btn {
-  float: right;
-  background: white;
-  color: #D83939;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 30px;
-}
-.hero {
-  background: #fff0f0;
-  padding: 60px 0;
+  padding: 0px 0px; /* 🔽 قلل الارتفاع */
   text-align: center;
+  border-bottom: 5px solid #9a1b1b;
 }
-.hero h2 {
-  font-size: 32px;
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+section h2 {
+  color: #d32f2f;
   margin-bottom: 10px;
 }
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
-}
-.btn-primary {
-  background: #D83939;
-  color: white;
-}
-.features, .about, .contact {
-  padding: 60px 0;
-}
-.features .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.card {
-  flex: 1 1 calc(50% - 20px);
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.cta {
   text-align: center;
-  font-size: 18px;
+  margin: 40px 0;
 }
-.contact p {
-  margin: 8px 0;
-}
-.btn-whatsapp {
-  background: #25D366;
+.cta button {
+  background: #d32f2f;
   color: white;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
-.footer {
+footer {
   background: #222;
-  color: white;
+  color: #ccc;
   text-align: center;
   padding: 20px;
+  font-size: 0.9em;
+}
+ul {
+  list-style-type: disc;
+  padding-right: 20px;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+
+/* تحسين عرض الصور بشكل شبكي */
+.hero-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.hero-gallery img {
+  width: 100%;
+  aspect-ratio: 2.7 / 2; /* 👈 توحيد النسبة العرض:الارتفاع */
+  object-fit: cover;   /* 👈 قص الصورة لملء الإطار دون تمدد أو تشويه */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* زر التوقيع بتصميم عصري */
+/* زر التوقيع بتصميم احترافي وجذاب */
+.sign-button {
+  display: inline-block;
+  background-color: #b30000; /* أخضر \ */
+  color: #fff;
+  padding: 20px 50px;
+  font-size: 1.6em;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 0 #7a0000; /* ظل داخلي للأسفل */
+  transition: all 0.2s ease-in-out;
+}
+
+.sign-button:hover {
+  background-color: #8b0000;
+  box-shadow: 0 2px 0 #5c0000;
+  transform: translateY(1px);
+}
+
+.sign-button:active {
+  background-color: #4d0000;
+  box-shadow: 0 0px 0 #5c0000;
+  transform: translateY(3px);
 }
